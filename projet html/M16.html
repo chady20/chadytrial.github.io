@@ -1,0 +1,30 @@
+<html>
+<header>
+<title>
+M16
+</title>
+<link rel="stylesheet" type="text/css" href="weaponscss.css">
+<script>
+function m16change(){
+var suppressor=document.getElementById("suppressor").checked;
+var grip=document.getElementById("foregrip").checked;
+if(suppressor==true && grip==true)document.getElementById("M16pic").src="./images/M162.jpg";
+else if(suppressor==true)document.getElementById("M16pic").src="./images/M16suppressor.jpg";
+else if(grip==true)document.getElementById("M16pic").src="./images/M16grip.jpg";
+else document.getElementById("M16pic").src="./images/M16.jpg";
+}
+</script>
+
+
+</header>
+<body>
+<table>
+<tr>
+<th class="special" > Attachements</th>
+<th  rowspan="3" ><img  id="M16pic"src="./images/M16.jpg" height="100%" width="100%"></th>
+<tr><th class="special">Suppressor<br><input type="checkbox" id="suppressor" onclick="m16change()"></th></tr>
+<tr><th class="special">Foregrip<br><input type="checkbox" id="foregrip" onclick="m16change()"></th></tr>
+</table>
+
+</body>
+</html>

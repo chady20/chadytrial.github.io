@@ -1,0 +1,32 @@
+<html>
+<header>
+<title>
+AK47
+</title>
+<link rel="stylesheet" type="text/css" href="weaponscss.css">
+<script>
+function ak47change(){
+var mag=document.getElementById("Mag").checked;
+var optic=document.getElementById("optic").checked;
+if(mag==true && optic==true)document.getElementById("AK47pic").src="./images/AK472.jpg";
+else if(mag==true)document.getElementById("AK47pic").src="./images/AK47mag.jpg";
+else if(optic==true)document.getElementById("AK47pic").src="./images/AK47optic.jpg";
+else document.getElementById("AK47pic").src="./images/AK47.jpg";
+}
+
+
+</script>
+
+
+</header>
+<body>
+<table>
+<tr>
+<th class="special"> Attachements</th>
+<th  rowspan="3" ><img id="AK47pic"src="./images/AK47.jpg" height="100%" width="100%"></th>
+<tr><th class="special"> Extended Mag<br> <input type="checkbox" id="Mag" onclick="ak47change()"></th></tr>
+<tr><th class="special">Optic<br><input type="checkbox" id="optic" onclick="ak47change()"></th></tr>
+</table>
+
+</body>
+</html>

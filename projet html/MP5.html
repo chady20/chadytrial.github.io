@@ -1,0 +1,32 @@
+<html>
+<header>
+<title>
+MP5
+</title>
+<link rel="stylesheet" type="text/css" href="weaponscss.css">
+<script>
+function mp5change(){
+var suppressor=document.getElementById("suppressor").checked;
+var nostock=document.getElementById("nostock").checked;
+if(suppressor==true && nostock==true)document.getElementById("MP5pic").src="./images/MP52.jpg";
+else if(suppressor==true)document.getElementById("MP5pic").src="./images/MP5suppressor.jpg";
+else if(nostock==true)document.getElementById("MP5pic").src="./images/MP5nostock.jpg";
+else document.getElementById("MP5pic").src="./images/MP5.jpg";
+}
+
+
+</script>
+
+
+</header>
+<body>
+<table>
+<tr>
+<th class="special"> Attachements</th>
+<th  rowspan="3" ><img id="MP5pic"src="./images/MP5.jpg" height="100%" width="100%"></th>
+<tr><th class="special"> Suppressor <br><input type="checkbox" id="suppressor" onclick="mp5change()"></th></tr>
+<tr><th class="special"> No stock <br><input type="checkbox" id="nostock" onclick="mp5change()"></th></tr>
+</table>
+
+</body>
+</html>

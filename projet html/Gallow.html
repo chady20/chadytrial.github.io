@@ -1,0 +1,32 @@
+<html>
+<header>
+<title>
+Gallow
+</title>
+<link rel="stylesheet" type="text/css" href="weaponscss.css">
+<script>
+function gallowchange(){
+var lazer=document.getElementById("lazer").checked;
+var stock=document.getElementById("stock").checked;
+if(lazer==true && stock==true)document.getElementById("GALLOWpic").src="./images/Gallow2.jpg";
+else if(lazer==true)document.getElementById("GALLOWpic").src="./images/Gallowlaser.jpg";
+else if(stock==true)document.getElementById("GALLOWpic").src="./images/Gallowstock.jpg";
+else document.getElementById("GALLOWpic").src="./images/Gallow.jpg";
+}
+
+
+</script>
+
+
+</header>
+<body>
+<table>
+<tr>
+<th class="special"> Attachements</th>
+<th  rowspan="3" ><img id="GALLOWpic"src="./images/Gallow.jpg" height="100%" width="100%"></th>
+<tr><th class="special"> lazer <br><input type="checkbox" id="lazer" onclick="gallowchange()"></th></tr>
+<tr><th class="special">  stock<br><input type="checkbox" id="stock" onclick="gallowchange()"></th></tr>
+</table>
+
+</body>
+</html>
